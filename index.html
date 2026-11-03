@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="A birthday surprise made with love for the best brother in the world.">
+  <title>A Birthday Surprise for My Brother</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#birthday">Skip to the celebration</a>
+
+  <div class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+    <div class="welcome-glow" aria-hidden="true"></div>
+    <div class="particle-field" aria-hidden="true"></div>
+    <div class="welcome-content">
+      <p class="eyebrow welcome-eyebrow">A LITTLE SOMETHING, JUST FOR YOU</p>
+      <h1 id="welcome-title">Something Special<br>Is Waiting For You<span class="gold">...</span></h1>
+      <p class="welcome-recipient">For <span id="welcome-recipient-name">P RANJITH KUMAR</span></p>
+      <p class="welcome-subtitle">Today is not just another day. It's the celebration of someone very special.</p>
+      <button class="button button-gold welcome-button" id="open-surprise" type="button">
+        OPEN YOUR SURPRISE <span aria-hidden="true">♥</span>
+      </button>
+      <p class="welcome-signoff">Made with love, your little brother</p>
+    </div>
+    <span class="welcome-corner welcome-corner-top" aria-hidden="true"></span>
+    <span class="welcome-corner welcome-corner-bottom" aria-hidden="true"></span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="#birthday" aria-label="A birthday surprise, home">FOR MY BROTHER<span> ♥</span></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#birthday">The celebration</a>
+      <a href="#memories">Our memories</a>
+      <a href="#letter">My letter</a>
+      <a href="#surprise">One last surprise</a>
+    </nav>
+    <div class="music-control">
+      <button class="music-button" id="music-toggle" type="button" aria-label="Play birthday music" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">♫</span>
+        <span class="music-label">Music on</span>
+      </button>
+      <label class="sr-only" for="volume-control">Music volume</label>
+      <input id="volume-control" class="volume-control" type="range" min="0" max="1" step="0.05" value="0.55" aria-label="Music volume">
+      <audio id="birthday-audio" loop preload="none">
+        <source src="music/birthday-song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="birthday" aria-labelledby="birthday-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">TODAY, THE WORLD CELEBRATES YOU</p>
+        <h1 class="hero-title reveal" id="birthday-title">Happy Birthday,<br><span>My Brother!</span> <span class="cake-emoji" aria-hidden="true">🎂</span></h1>
+        <p class="brother-name reveal" id="brother-name">[ BROTHER'S NAME ]</p>
+        <div class="cake-scene reveal" aria-label="A birthday cake with a glowing candle">
+          <div class="candle"><span class="flame"></span></div>
+          <div class="cake-top"></div>
+          <div class="cake-layer cake-layer-top"></div>
+          <div class="cake-layer cake-layer-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="hero-message reveal">To the one who made growing up a whole lot more fun,<br class="desktop-break"> and life a whole lot better just by being in it.</p>
+        <p class="live-greeting reveal" id="live-greeting" aria-live="polite"></p>
+        <div class="countdown-wrap reveal" id="countdown-wrap" hidden>
+          <p class="countdown-label">Until we celebrate you again</p>
+          <div class="countdown" id="countdown" aria-live="polite"></div>
+        </div>
+        <a class="scroll-cue reveal" href="#memories"><span>THE GOOD STUFF IS BELOW</span><span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+      <div class="hero-stars" aria-hidden="true">✦ <span>·</span> ✧ <span>·</span> ✦</div>
+        <div class="hero-floats" aria-hidden="true"><span>✦</span><span>♥</span><span>✧</span><span>♥</span></div>
+    </section>
+
+    <section class="memories section-shell section-pad" id="memories" aria-labelledby="memories-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE YEARS, THE LAUGHS, THE LITTLE THINGS</p>
+        <h2 id="memories-title">Some Memories <span>Never Fade</span> <span aria-hidden="true">♥</span></h2>
+        <p>Every picture has a story, and every story reminds me how lucky I am to have you as my brother.</p>
+      </div>
+      <div class="memory-grid">
+        <button class="memory-card reveal" type="button" data-caption="Partners in every kind of trouble.">
+          <span class="memory-image image-one"><img src="images/brother1.png" alt="A favorite memory together" loading="lazy"><span class="image-fallback" aria-hidden="true">✦</span><span class="image-number">01</span><span class="zoom-hint" aria-hidden="true">VIEW MEMORY ↗</span></span>
+          <span class="memory-caption">Partners in every kind of trouble.</span>
+        </button>
+        <button class="memory-card reveal" type="button" data-caption="A thousand laughs, and counting.">
+          <span class="memory-image image-two"><img src="images/brother2.png" alt="A happy moment from our life together" loading="lazy"><span class="image-fallback" aria-hidden="true">✧</span><span class="image-number">02</span><span class="zoom-hint" aria-hidden="true">VIEW MEMORY ↗</span></span>
+          <span class="memory-caption">A thousand laughs, and counting.</span>
+        </button>
+        <button class="memory-card reveal" type="button" data-caption="Growing up, but never growing apart.">
+          <span class="memory-image image-three"><img src="images/brother3.png" alt="A special day shared with my brother" loading="lazy"><span class="image-fallback" aria-hidden="true">✦</span><span class="image-number">03</span><span class="zoom-hint" aria-hidden="true">VIEW MEMORY ↗</span></span>
+          <span class="memory-caption">Growing up, but never growing apart.</span>
+        </button>
+        <button class="memory-card reveal" type="button" data-caption="My favorite person to call family.">
+          <span class="memory-image image-four"><img src="images/brother4.png" alt="A treasured brotherhood memory" loading="lazy"><span class="image-fallback" aria-hidden="true">✧</span><span class="image-number">04</span><span class="zoom-hint" aria-hidden="true">VIEW MEMORY ↗</span></span>
+          <span class="memory-caption">My favorite person to call family.</span>
+        </button>
+      </div>
+      <p class="gallery-note reveal">Your photos go here. Replace the illustrated files in the <code>images</code> folder with your own memories.</p>
+    </section>
+
+    <section class="letter-section section-shell section-pad" id="letter" aria-labelledby="letter-title">
+      <div class="letter-glow" aria-hidden="true"></div>
+      <div class="letter-layout">
+        <div class="letter-intro reveal">
+          <p class="eyebrow">A NOTE I HOPE YOU KEEP</p>
+          <h2 id="letter-title">A Few Words<br>From <span>My Heart...</span></h2>
+          <div class="letter-rule"><span>♥</span></div>
+          <p class="letter-aside">Some things are easier to say when you write them down.</p>
+        </div>
+        <div class="letter-paper reveal">
+          <span class="paper-mark" aria-hidden="true">“</span>
+          <div class="letter-copy" id="letter-copy" aria-label="A birthday letter from your brother"></div>
+          <span class="letter-signature" id="letter-signature">Always your little brother <span aria-hidden="true">♥</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="surprise-section section-shell section-pad" id="surprise" aria-labelledby="surprise-title">
+      <div class="surprise-glow" aria-hidden="true"></div>
+      <div class="surprise-content reveal">
+        <p class="eyebrow">KEEP THIS ONE CLOSE</p>
+        <h2 id="surprise-title">One Last Surprise<br><span>For You...</span></h2>
+        <p class="surprise-teaser">A little reminder, for today and every day after.</p>
+        <button class="button button-outline" id="reveal-message" type="button" aria-expanded="false" aria-controls="final-message">
+          CLICK TO REVEAL <span aria-hidden="true">♥</span>
+        </button>
+        <div class="final-message" id="final-message" hidden aria-live="polite">
+          <span class="final-heart" aria-hidden="true">♥</span>
+          <p>Whatever happens in life, remember one thing...</p>
+          <p>You will never have to face this world alone.</p>
+          <p>Your little brother will always be beside you.</p>
+          <p class="final-signoff">Love you, Bro! <span aria-hidden="true">❤️</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="back-to-top" id="back-to-top" href="#birthday" aria-label="Back to top">↑</a>
+    <p>Made with all my heart, for my one-and-only brother <span aria-hidden="true">♥</span></p>
+    <p class="footer-small">No matter how old we get, I'll always be your little brother.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Memory photo" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo">×</button>
+    <img class="lightbox-image" id="lightbox-image" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="toast" id="music-status" role="status" aria-live="polite"></div>
+</body>
+</html>
